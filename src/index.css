@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: Roboto, sans-serif;
+    @apply text-textColor;
+  }
+}
+
+.button{
+  @apply bg-accent py-3 px-10 text-white border border-accent rounded-[10px] text-xl block w-fit mx-auto mt-[30px] hover:bg-white hover:text-textColor;
+  transition: .3s ease all;
+}
+
+.shadow-image{
+  border: 1px solid #F3F4FF;
+  filter: drop-shadow(0px 12px 44px rgba(0, 0, 0, 0.1));
+  border-radius: 10px;
+}
+
+details > summary {
+  list-style: none;
+  cursor: pointer;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+.details summary svg #arrow,
+.details summary svg circle{
+  stroke: #252528;
+  transition: .3s ease all;
+}
+
+.details[open] summary svg{
+  transform: initial;
+}
+
+.details[open] summary svg #arrow,
+.details[open] summary svg circle{
+  stroke: #4316F3;
+}
+
+.details summary svg{
+  transform: rotate(180deg);
+  max-width: 41px;
+  max-height: 41px;
+  height: 100%;
+  width: 100%;
+  transition: .3s ease all;
+}
+
+._lock{
+  overflow: hidden;
+}
+
+.wrapper{
+  width: 100%;
+	min-height: 100vh;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+  position: relative;
+}
+
+.page{
+  flex: 1 1 auto;
+}
+
+.form-submit{
+  width: 100%;
+  margin-bottom: 30px;
+}
